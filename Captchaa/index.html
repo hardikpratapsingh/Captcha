@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"
+	href="captcha.css">
+	<link rel="stylesheet" href=
+"https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+		integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+		crossorigin="anonymous">
+	<script src="main.js"></script>
+</head>
+
+<body onload="generate()">
+	<div id="content1">
+		<label>Name</label><br>
+		<input type="name" name="name" placeholder="Enter your name" class="box"><br>
+		<label>Email</label><br>
+		<input type="email" name="email" placeholder="Enter your email" class="box"><br>
+		<label>Age (optional)</label><br>
+		<input type="age" name="age" placeholder="Enter your age" class="box"><br><br>
+	<label>Which is your course?</label><br>
+        <div id="option1">
+            <select>
+                <option value="Select your role">BCA/Btech/DataScience</option>
+                <option value="Student">MCA/Mtech</option>
+                <option value="Full time job">BA law/LLB/BSc LAW</option>
+                <option value="Full time learner">Bcom/BBA</option>
+                <option value="Prefer not to easy">Mcom/MBA</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <br>
+        <label id="head1">Would you recommend The ICFAI Uiversity to a friend?</label><br>
+        <input type="radio" name="radio" class="larger">definitely<br>
+        <input type="radio" name="radio" class="larger">maybe<br>
+        <input type="radio" name="radio" class="larger">not sure<br>
+        <br>
+        <label id="head1">How is the environment in ICFAI University?</label><br>
+        <input type="radio" name="radio" class="larger">better<br>
+        <input type="radio" name="radio" class="larger">good<br>
+        <input type="radio" name="radio" class="larger">not bed<br>
+        <br>
+        <label id="head1">How is the canteen in ICFAI University?</label><br>
+        <input type="radio" name="radio" class="larger">good<br>
+        <input type="radio" name="radio" class="larger">better<br>
+        <input type="radio" name="radio" class="larger">not bed<br>
+        <br>
+        <label id="head1">How is the nature of teachers?</label><br>
+        <input type="radio" name="radio" class="larger">good<br>
+        <input type="radio" name="radio" class="larger">better<br>
+        <input type="radio" name="radio" class="larger">best<br>
+        <br>
+	<div id="user-input" class="inline">
+		<input type="text"
+			id="submit"
+			placeholder="Captcha code" />
+	</div>
+
+	<div class="inline" onclick="generate()">
+		<i class="fas fa-sync"></i>
+	</div>
+
+	<div id="image"
+		class="inline"
+		selectable="False">
+	</div>
+	<input type="submit"
+		id="btn"
+		onclick="printmsg()" />
+
+	<p id="key"></p>
+</body>
+</html>
